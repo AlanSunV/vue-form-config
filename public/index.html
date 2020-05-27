@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=8">
+  <meta http-equiv="Expires" content="-1">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-control" content="no-cache">
+  <meta http-equiv="Cache" content="no-cache">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>表单配置</title>
+
+</head>
+
+<body>
+  <script>
+    (function () {
+      var html = document.documentElement;
+
+      function onWindowResize() {
+        html.style.fontSize = html.getBoundingClientRect().width / 20 + 'px';
+      }
+
+      window.addEventListener('resize', onWindowResize);
+      onWindowResize();
+
+
+      var handle = function (event) {
+        event.preventDefault(); //阻止元素发生默认的行为
+      }
+      document.body.addEventListener('touchmove', handle, false);//添加监听事件--页面不可滚动
+    })();
+  </script>
+  <div id="app"></div>
+
+</body>
+
+</html>
